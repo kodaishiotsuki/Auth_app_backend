@@ -1,15 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\Models\User;
+
+use App\Http\Requests\RegisterRequest;
+use Illuminate\Http\Request;
 use Auth;
 use DB;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
+    //ログイン
     public function Login(Request $request)
     {
         try {
@@ -31,5 +33,11 @@ class AuthController extends Controller
         return response([
             'message' => 'Invalid Email Or Password',
         ], 401);
+    }
+
+    //新規登録
+    public function Register(RegisterRequest $request)
+    {
+
     }
 }

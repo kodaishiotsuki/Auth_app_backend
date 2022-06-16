@@ -8,5 +8,9 @@ use App\Http\Controllers\AuthController;
 //     return $request->user();
 // });
 
+
 // login Routes
 Route::post('/login', [AuthController::class, 'Login']);
+
+//Register routes
+Route::post('/register', [AuthController::class, 'Register']);
